@@ -33,6 +33,7 @@ games = 10000
 result = 0
 for i in range(10000):
     choice = random.randrange(1, 4)
-    if Monty_hall(choice, True):
+    if Monty_hall(choice, True):  # False если оставили дверь
         result += 1
 print(f'Поменяли дверь и выиграли: {round(result / games * 100, 2)}')
+# print(f'Не меняли дверь и выиграли: {round(result / games * 100, 2)}')
