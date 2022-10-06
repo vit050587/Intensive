@@ -27,8 +27,6 @@ def Monty_hall(choice, change):
             return True
         else:
             return False
-
-
 games = 10000
 result = 0
 for i in range(10000):
