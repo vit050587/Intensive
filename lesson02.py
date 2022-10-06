@@ -7,9 +7,32 @@
 # смене двери и при отказе от смены двери.
 # Помощь
 # Для решения задачи вам потребуется импортировать модуль random:
-# import random
+import random
+
+
 # и использовать его метод randrange. Метод randrange принимает в качестве аргумента два числа n1 и n2 и
 # генерирует случайное число в диапазоне от n1 до n2-1:
 # random.randrange(2, 5)
 # # вернет либо 2, либо 3, либо 4
-1
+
+def Monty_hall(choice, change):
+    doors = random.randrange(1, 4)
+    if doors == choice:
+        if change:
+            return False
+        else:
+            return True
+    else:
+        if change:
+            return True
+        else:
+            return False
+
+
+games = 10000
+result = 0
+for i in range(10000):
+    choice = random.randrange(1, 4)
+    if Monty_hall(choice, True):
+        result += 1
+print(f'Поменяли дверь и выиграли: {round(result / games * 100, 2)}')
