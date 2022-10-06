@@ -9,7 +9,7 @@
 # https://pythonworld.ru/tipy-dannyx-v-python/stroki-funkcii-i-metody-strok.html
 
 number = input('Пожалуйста введите число: ')
-test = number.replace('.', '', 1)
+test = number.replace('.', '', 1).replace('-', '', 1)
 if test.isdigit():
     print('Верно')
 else:
